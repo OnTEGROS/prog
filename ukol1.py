@@ -1,11 +1,10 @@
 def reading(file, encoding):
     list = []
     try:
-        open(file, encoding = encoding)
+        file = open(file, encoding = encoding)
     except FileNotFoundError:
         print(f"Soubor '{file}' nebyl nalezen!")
         return list
-    file = open(file, encoding = encoding)
     for line in file:
         data = line.rstrip()
         list.append(data)
